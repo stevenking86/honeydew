@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
   def create
-    list = List.new(name: params[:name], creator_id: current_user.id)
+    list = List.new(name: params[:list][:name], creator_id: current_user.id)
     if list.save
       redirect_to user_path(current_user.id)
     else
