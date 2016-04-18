@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160417234906) do
 
   create_table "lists", force: :cascade do |t|
     t.string   "name",       null: false
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
