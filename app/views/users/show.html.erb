@@ -2,6 +2,9 @@
 <p> Your lists: </p>
 <ul>
 <% current_user.lists.each do |list| %>
-  <li> <% list.name %> </li>
+  <li> <%= list.name %> </li>
 <%end %>
+<% current_user.created_lists.each do |list| %>
+  <li> <%= link_to list.name, list_path(list.id) %> </li>
+<%end%>
 </ul>

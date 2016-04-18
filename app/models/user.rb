@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :doers, foreign_key: "doer_id"
   has_many :tasks, through: :doers
 
-
+  def created_lists
+    List.where(creator_id: self.id)
+  end
 
 end
