@@ -4,4 +4,5 @@ class Task < ActiveRecord::Base
   validates :list_id, presence: true
 
   has_many :doers
+  belongs_to :list
 end
