@@ -10,11 +10,9 @@
   <% if logged_in? %>
   <%= link_to "Your Lists", user_path(current_user.id) %>
   <%= link_to "Logout", logout_path %>
-<p>You're logged in</p>
 <% else %>
 <%= link_to "Register", register_path %> |
   <%= link_to "Login", login_path %>
-<p> You're not logged in </p>
 <% end %>
 
 <%= yield %>
