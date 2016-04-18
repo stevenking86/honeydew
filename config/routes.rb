@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :create]
   resources :sessions, only: [:create]
+  resources :lists, only: [:create, :new, :show, :destroy]
+  resources :tasks, only: [:create, :new, :destroy]
 
 
   get 'register' => 'users#new'
