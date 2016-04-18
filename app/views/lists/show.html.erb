@@ -1,5 +1,5 @@
 <p><%= @list.name %></p>
 
 <ul><% @list.tasks.each do |task| %>
-  <li> <%= task.description %> | Assigned to: <%= task.get_doer_names %> | <%=task.completeness%> </li>
+  <li> <%= task.description %> | Assigned to: <%= task.get_doer_names %> | <%=task.completeness%> | Due Date: <%=task.due_date%> </li>
 <%end%></ul>
