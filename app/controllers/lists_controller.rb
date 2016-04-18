@@ -1,6 +1,12 @@
 class ListsController < ApplicationController
 
   def create
+    list = List.new(name: params[:name], creator_id: current_user.id)
+    if list.save
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to root_path
+    end
   end
 
   def show
@@ -8,6 +14,7 @@ class ListsController < ApplicationController
   end
 
   def new
+    @list = List.new()
   end
 
   def destroy
