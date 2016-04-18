@@ -7,4 +7,12 @@ class List < ActiveRecord::Base
   has_many :users, through: :list_users
   has_many :tasks
 
+  def possible_doers
+    doers = []
+    doers << self.creator
+    self.users.each {|user| doers << user}
+    doers.uniq
+  end
+
+
 end
