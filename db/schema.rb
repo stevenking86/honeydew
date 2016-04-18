@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160417234906) do
     t.string   "description",             null: false
     t.integer  "completed",   default: 0, null: false
     t.date     "due_date"
-    t.integer  "list_id"
+    t.integer  "list_id",                 null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end

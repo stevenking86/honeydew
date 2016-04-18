@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :description, null: false
       t.integer :completed, null: false, default: 0
       t.date :due_date
-      t.integer :list_id
+      t.integer :list_id, null: false
 
       t.timestamps null: false
     end
