@@ -2,7 +2,7 @@
 <p><%=f.text_field :description, placeholder: "Description" %></p>
 <p><%= f.date_field :due_date %></p>
 
-<p>Assign someone to this task? <%= select_tag :doers, options_for_select(@possible_doers.map {|doer| doer.name}) %></p>
+<p>Assigned to: <%= select_tag :doers, options_for_select(@possible_doers.map {|doer| doer.name}) %></p>
 
 <p><%=f.submit "Add task to List" %></p>
 <%end%>

@@ -14,5 +14,10 @@ class List < ActiveRecord::Base
     doers.uniq
   end
 
+  def get_doer_id_by_name(name)
+    id = 0
+    self.possible_doers.each {|doer| id =doer.id if doer.name == name}
+    id
+  end
 
 end
