@@ -4,13 +4,14 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :create]
   resources :sessions, only: [:create]
   resources :lists, only: [:create, :new, :show, :destroy] do
-    resources :tasks, only: [:create, :new, :destroy]
+    resources :tasks, only: [:create, :new, :destroy, :update]
   end
 
 
   get 'register' => 'users#new'
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
+  get 'mark_complete' => 'tasks#completer'
 
   root 'home#index'
 

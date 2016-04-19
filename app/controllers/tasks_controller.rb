@@ -17,6 +17,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def completer
+    @list = List.find(params[:list_id])
+    @task = Task.find(params[:task_id])
+    @task.update(completed: 1)
+    redirect_to list_path(@list.id)
+  end
 
 
 end
