@@ -11,14 +11,14 @@
 <% current_user.lists.each do |list| %>
 <div class = "row">
   <div class = "col-md-4"> <%= link_to list.name, list_path(list.id) %> </div>
-  <div class = "col-md-4"> <%= link_to "Delete List", list_path(list.id), method: :delete %> </div>
+  <div class = "col-md-4 text-warning"> <%= link_to "Delete List", list_path(list.id), method: :delete, class: "text-danger" %> </div>
 </div>
 <%end %>
 
 <% current_user.created_lists.each do |list| %>
 <div class = "row">
   <div class = "col-md-4"> <%= link_to list.name, list_path(list.id) %> </div>
-  <div class = "col-md-4"> <%= link_to "Delete List", list_path(list.id), method: :delete %> </div>
+  <div class = "col-md-4 "> <%= link_to "Delete List", list_path(list.id), method: :delete, class: "text-danger" %> </div>
 </div>
 <%end%>
 </h3>
