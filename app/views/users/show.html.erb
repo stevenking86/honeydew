@@ -1,12 +1,24 @@
-<p> Welcome, <%= current_user.name %> </p>
-
-<p><%= link_to "Create New List", new_list_path %>
-<p> Your lists: </p>
-<ul>
+<div class = "row">
+  <div class = "col-md-4">
+    <h2> <%= current_user.name %>'s Lists </h2>
+  </div>
+  <div class = "col-md-4"></div>
+  <div class = "col-md-4">
+    <h2><%= link_to "Create New List", new_list_path %></h2>
+  </div>'
+</div>
+<h3>
 <% current_user.lists.each do |list| %>
-  <li> <%= list.name %> </li>
+<div class = "row">
+  <div class = "col-md-4"> <%= link_to list.name, list_path(list.id) %> </div>
+  <div class = "col-md-4"> <%= link_to "Delete List", list_path(list.id), method: :delete %> </div>
+</div>
 <%end %>
+
 <% current_user.created_lists.each do |list| %>
-  <li> <%= link_to list.name, list_path(list.id) %> <%= link_to "Delete List", list_path(list.id), method: :delete %>  </li>
+<div class = "row">
+  <div class = "col-md-4"> <%= link_to list.name, list_path(list.id) %> </div>
+  <div class = "col-md-4"> <%= link_to "Delete List", list_path(list.id), method: :delete %> </div>
+</div>
 <%end%>
-</ul>
+</h3>
