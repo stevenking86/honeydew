@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :tasks, only: [:create, :new, :destroy]
   end
 
+  resources :list_users, only: [:create]
 
   get 'register' => 'users#new'
   get 'login' => 'sessions#new'
