@@ -24,5 +24,10 @@ class TasksController < ApplicationController
     redirect_to list_path(@list.id)
   end
 
+  def destroy
+    @list = List.find(params[:list_id])
+    Task.find(params[:task_id]).delete
+    redirect_to list_path(@list.id)
+  end
 
 end

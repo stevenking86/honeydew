@@ -3,5 +3,5 @@
 <p><%= link_to "New Task", new_list_task_path(@list.id)%></p>
 
 <ul><% @list.tasks.each do |task| %>
-  <li> <%= task.description %> | Assigned to: <%= task.get_doer_names %> | <%=task.completeness%> | Due Date: <%=task.due_date%> <%=link_to "Mark Complete",mark_complete_path(list_id: @list.id, task_id: task.id)%></li>
+  <li> <%= task.description %> | Assigned to: <%= task.get_doer_names %> | <%=task.completeness%> | Due Date: <%=task.due_date%> <%=link_to "Mark Complete",mark_complete_path(list_id: @list.id, task_id: task.id)%> <%= link_to "Delete Task", list_task_path(list_id: @list.id, task_id: task.id), method: :delete %> </li>
 <%end%></ul>
