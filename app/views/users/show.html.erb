@@ -7,6 +7,6 @@
   <li> <%= list.name %> </li>
 <%end %>
 <% current_user.created_lists.each do |list| %>
-  <li> <%= link_to list.name, list_path(list.id) %> </li>
+  <li> <%= link_to list.name, list_path(list.id) %> <%= link_to "Delete List", list_path(list.id), method: :delete %>  </li>
 <%end%>
 </ul>

@@ -18,6 +18,8 @@ class ListsController < ApplicationController
   end
 
   def destroy
+    List.find(params[:id]).delete
+    redirect_to user_path(current_user.id)
   end
 
 end
