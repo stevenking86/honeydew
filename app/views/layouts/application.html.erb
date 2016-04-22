@@ -9,7 +9,8 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="whole_body">
+
   <nav class="navbar navbar-default">
     <div class="navbar-header">
       <a class="navbar-brand" href="/"><span id="dew_title">Honeydew</span></a>
@@ -25,7 +26,6 @@
 </ul>
 </nav>
 <%= yield %>
-
 
 </body>
 </html>
