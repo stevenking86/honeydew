@@ -12,7 +12,7 @@
 <% current_user.lists.each do |list| %>
 <div class = "row">
   <div class = "col-md-1"></div>
-  <div class = "col-md-3"> <%= link_to list.name, list_path(list.id) %> </div>
+  <div class = "col-md-3"> <%= link_to list.name, list_path(list.id), class: "list_name_links" %> </div>
   <div class = "col-md-4 text-warning"> <%= link_to "Delete List", list_path(list.id), method: :delete, class: "text-danger" %> </div>
 
 </div>
@@ -21,7 +21,7 @@
 <% current_user.created_lists.each do |list| %>
 <div class = "row">
   <div class = "col-md-1"></div>
-  <div class = "col-md-3"> <%= link_to list.name, list_path(list.id) %> </div>
+  <div class = "col-md-3"> <%= link_to list.name, list_path(list.id), class: "list_name_links" %> </div>
   <div class = "col-md-4 "> <%= link_to "Delete List", list_path(list.id), method: :delete, class: "text-danger" %> </div>
 </div>
 <%end%>
