@@ -12,10 +12,6 @@
   color: #ffbb33;
 }
 
-#title_logo {
-  height: 80px;
-  width: 80px;
-}
 
 
 .list_name_links {
@@ -25,4 +21,16 @@
 #whole_body {
   background-color: #0d0d0d;
   color: #e6e6e6;
+}
+
+.new_color {
+  color: #80ffaa;
+}
+
+.list_info {
+  margin-top: 3em;
+}
+
+.list_heading {
+  margin-bottom: 2em;
 }
