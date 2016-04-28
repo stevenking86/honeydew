@@ -1,0 +1,10 @@
+<%=form_for @list do |f| %>
+<div class="row">
+  <div class="col-xs-2">
+<p><%=f.text_field :name, placeholder: "List Name", class: "form-control" %></p>
+  </div>
+</div>
+<p><%= button_tag(type: "submit", class: "btn btn-default") do %>
+    Create List
+<% end %></p>
+<%end%>

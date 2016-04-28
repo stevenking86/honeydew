@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC|Poiret+One|Playfair+Display|Josefin+Sans' rel='stylesheet' type='text/css'>
+
   <title>Honeydew</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="whole_body">
 
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><span id="dew_title">Honeydew</span></a>
+    </div>
+    <ul class="nav navbar-nav">
+  <% if logged_in? %>
+  <li><%= link_to "Your Lists", user_path(current_user.id) %></li>
+  <li><%= link_to "Logout", logout_path %></li>
+<% else %>
+<li><%= link_to "Register", register_path %> </li>
+  <li><%= link_to "Login", login_path %></li>
+<% end %>
+</ul>
+</nav>
 <%= yield %>
 
 </body>
