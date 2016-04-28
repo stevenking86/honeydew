@@ -139,13 +139,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-  bcrypt (~> 3.1.7)
-=======
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.2.0)
->>>>>>> 238ce432dddf9f7190e2a78f1154a0dc8ded2ba5
   byebug
   jbuilder (~> 2.0)
   jquery-rails
