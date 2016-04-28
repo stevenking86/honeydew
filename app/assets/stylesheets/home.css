@@ -1,0 +1,41 @@
+#title {
+  font-family: 'Poiret One', cursive;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+#honey_title {
+  color: #80ffaa;
+}
+
+#dew_title {
+  color: #ffbb33;
+}
+
+
+
+.list_name_links {
+  color: #ffbb33;
+}
+
+#whole_body {
+  background-color: #0d0d0d;
+  color: #e6e6e6;
+}
+
+.new_color {
+  color: #80ffaa;
+}
+
+.list_info {
+  margin-top: 3em;
+}
+
+.list_heading {
+  margin-bottom: 2em;
+}
+
+input, textarea {
+    background-color: white;
+    color: #FFF;
+}
