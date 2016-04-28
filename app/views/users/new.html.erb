@@ -3,6 +3,8 @@
 <p><%=f.text_field :name, placeholder: "Name" %></p>
 <p><%=f.email_field :email, placeholder: "Email" %></p>
 <p><%=f.password_field :password, placeholder: "Password" %> </p>
-<p><%=f.submit "Create" %></p>
+<p><%= button_tag(type: "submit", class: "btn btn-default") do %>
+    Create
+<% end %></p>
 
 <%end%>

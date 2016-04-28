@@ -34,3 +34,8 @@
 .list_heading {
   margin-bottom: 2em;
 }
+
+input, textarea {
+    background-color: white;
+    color: #FFF;
+}
